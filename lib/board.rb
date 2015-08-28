@@ -12,5 +12,8 @@ puts " 1 | 2 | 3 ",
 print "\n"
 
 print "(Y)es or (N)o >"
+response = gets.chomp
+if responce == 'Y'
+  puts "pick X or O >"
 
 end
