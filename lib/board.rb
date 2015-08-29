@@ -1,19 +1,15 @@
 class Board
 
-puts "Hi there",
-"would you like to play a game of Tic Tac Toe?"
+attr_accessor
+pos = [1,2,3,4,5,6,7,8,9]
 
 
-puts " 1 | 2 | 3 ",
+puts " #{pos[0]} | #{pos[1]} | #{pos[2]} ",
      "-----------",
-     " 4 | 5 | 6 ",
+     " #{pos[3]} | #{pos[4]} | #{pos[5]} ",
      "-----------",
-     " 7 | 8 | 9 "
-print "\n"
+     " #{pos[6]} | #{pos[7]} | #{pos[8]} "
 
-print "(Y)es or (N)o >"
-response = gets.chomp
-if responce == 'Y'
-  puts "pick X or O >"
+
 
 end
