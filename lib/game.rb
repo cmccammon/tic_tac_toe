@@ -2,30 +2,34 @@
 #require_relative "../lib/board.rb"
 
 
-class Game
+
+# class Moves
+#   def initialize
+#     @move
+#   end
+class Player
+
+end
+# class Game
+
+pos = [0, 1, 2, 3, 4, 5, 6, 7, 8]  # => [0, 1, 2, 3, 4, 5, 6, 7, 8]
 
 
-
-
-  puts "Hi there",
-  "would you like to play a game of Tic-Tac-Toe?"
-  print "(Y)es or (N)o >"
-  response = gets.chomp.upcase
+  puts "Hi there",                                 # => "Hi there"
+  "would you like to play a game of Tic-Tac-Toe?"  # => nil
+  print "(Y)es or (N)o >"                          # => nil
+  response = gets.chomp.upcase                     # ~> NoMethodError: undefined method `chomp' for nil:NilClass
+  player1 = Player.new
+  player2 = Player.new
   if response == 'Y'
-    # puts "pick X or O >"
-    # xo = gets.chomp.upcase
-    # if xo == 'X'
-    # player1 = 'X'
-    # elsif xo == 'O'
-    # player2 = 'O'
-  #if player == 'X'
-  #computer = 'O'
-  #
+    puts "You are now playing Tic-Tac-Toe!"
 
-pos = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 
   loop do
-  puts "Player 1 is X make a move"
+
+
+
+  puts "Player 1 is X choose a square"
 
   puts " #{pos[0]} | #{pos[1]} | #{pos[2]} ",
        "-----------",
@@ -33,10 +37,12 @@ pos = [0, 1, 2, 3, 4, 5, 6, 7, 8]
        "-----------",
        " #{pos[6]} | #{pos[7]} | #{pos[8]} "
 
-  player1_mov = gets.chomp.to_i
+  player1 = gets.chomp.to_i
+
+  # If player ==
 
 
-  pos[player1_mov] = "X";
+  pos[player1] = "X";
 
 
   puts " #{pos[0]} | #{pos[1]} | #{pos[2]} ",
@@ -45,28 +51,36 @@ pos = [0, 1, 2, 3, 4, 5, 6, 7, 8]
        "-----------",
        " #{pos[6]} | #{pos[7]} | #{pos[8]} "
 
-  puts "Player 2 is O make a move"
-  player2_mov = gets.chomp.to_i
+  puts "Player 2 is O choose a square"
+  player2 = gets.chomp.to_i
 
-  pos[player2_mov] = "O";
+  pos[player2] = "O";
 
-
-
-  end
-
-
-
-
-
+  if pos.all? {|i| i.is_a?(String) } == true
+        puts "This game is a draw"
+        break
+      end
+end
 
 
 
   else
+
   puts "Maybe next time"
   end
-end
+
+
 # X is printed in array location of the board
 # array is checked for a winner
 #
 
 
+
+# >> Hi there
+# >> would you like to play a game of Tic-Tac-Toe?
+# >> (Y)es or (N)o >
+
+# ~> NoMethodError
+# ~> undefined method `chomp' for nil:NilClass
+# ~>
+# ~> /Users/chris/theironyard/week1/day4/tic_tac_toe/lib/game.rb:21:in `<main>'

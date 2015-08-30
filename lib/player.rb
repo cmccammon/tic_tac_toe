@@ -2,7 +2,7 @@
 class Player
 
   def player
-    player = Player.new(xo)
+    player1 = Player.new
 
   end
 end
