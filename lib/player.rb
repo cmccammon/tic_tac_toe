@@ -1,8 +1,11 @@
 
 class Player
 
-  def player
-    player1 = Player.new
+attr_accessor :player, :moves
+
+  def initialize(player)
+    @player = player
+    @moves
 
   end
 end
